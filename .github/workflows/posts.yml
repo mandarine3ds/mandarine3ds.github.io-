@@ -1,0 +1,50 @@
+name: Generate Release Posts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-release-post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get release info
+        id: release
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const response = await github.rest.repos.getLatestRelease({
+              owner: 'mandarine3ds',
+              repo: 'mandarine'
+            });
+            return response.data;
+
+      - name: Create blog post
+        run: |
+          VERSION="${{ fromJSON(steps.release.outputs.result).tag_name }}"
+          TITLE="${{ fromJSON(steps.release.outputs.result).name }}"
+          DATE=$(date +%Y-%m-%d)
+          BODY="${{ fromJSON(steps.release.outputs.result).body }}"
+
+          POST_PATH="content/posts/release-${VERSION}/index.md"
+          mkdir -p "$(dirname "$POST_PATH")"
+
+          cat > "$POST_PATH" << EOL
+          +++
+          author = "Mandarine Team"
+          title = '${TITLE}'
+          date = ${DATE}
+          description = "Release notes for version ${VERSION}"
+          +++
+
+          ${BODY}
+          EOL
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add content/
+          git commit -m "posts: add release post for ${{ fromJSON(steps.release.outputs.result).tag_name }}"
+          git push
