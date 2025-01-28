@@ -1,5 +1,5 @@
-title = "Strato - Nintendo Switch™ Emulator"
-baseURL = 'https://strato-emu.github.io/'
+title = "Mandarine - Nintendo 3DS Emulator "
+baseURL = 'https://mandarine3ds.github.io/'
 
 # This is what goes in <html lang="">
 languageCode = 'en-us'
@@ -54,12 +54,12 @@ url = '/about/'
 weight = 30
 
 [params]
-sitename = "Strato - Nintendo Switch™ Emulator"
+sitename = "Mandarine - Nintendo 3DS Emulator"
 defaultColor = "auto"                           # set color mode: dark, light, auto
 # Setting it to 'auto' applies the color scheme based on the visitor's device color preference. If you don't specify anything, ignore this parameter, or leave it blank,
 # the default value is set to 'auto'.
 # You can take a look at layouts/index.html for more information.
-description = "Nintendo Switch™ Emulator for Android™"
+description = "Mandarine3DS for Windows, Linux and Android"
 mainSections = ['posts']
 toc = false                                            # set to false to disable table of contents 'globally'
 tocOpen = false                                        # set to true to open table of contents by default
@@ -79,9 +79,9 @@ rssFeedDescription = "summary" # available options: 1) summary 2) full
 [params.author]
 avatar = "logo.png" # put the file in assets folder; also ensure that image has same height and width
 # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-intro = "Strato Emulator"
+intro = "Mandarine3DS"
 name = ""
-description = "An open source Nintendo Switch™ emulator for Android™, built from the ground up and designed for Android™."
+description = "An open source Nintendo 3DS Emulator for Windows, Linux and Android."
 
 # Allow to override webmanifest options
 [params.webmanifest]
@@ -100,11 +100,11 @@ TileColor = "#2d89ef" # default windows 10 blue tile color
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/strato-emu/strato"
+url = "https://github.com/mandarine3ds/mandarine3ds/"
 
 [[params.socialIcons]]
 name = "discord"
-url = "https://discord.gg/YhpdhVBmXX"
+url = "https://discord.gg/8xjMHWEuf6"
 
 [[params.socialIcons]]
 name = "Rss"

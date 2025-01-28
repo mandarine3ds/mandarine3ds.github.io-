@@ -17,7 +17,7 @@
   translation: "Go to top"
 
 - id: "footer.disclaimer"
-  translation: "Strato Emulator"
+  translation: "Mandarine3DS"
 
 ## ERRORS ##
 - id: "errors.404"

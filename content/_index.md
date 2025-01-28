@@ -1,4 +1,4 @@
 +++
 title = "Home"
-author = "Strato Team"
+author = "Gamer64"
 +++

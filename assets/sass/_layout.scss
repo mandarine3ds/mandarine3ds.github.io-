@@ -97,6 +97,34 @@
     margin-top: 3em;
   }
 
+  @font-face {
+  font-family: 'CustomFont'; /* Font Family Name */
+  src: url('https://github.com/mandarine3ds/mandarine3ds.github.io/blob/master/assets/sass/fonts/TechnoRaceItalic.otf.ttf') format('truetype'); /* Font path */
+  }
+
+ .btn_download {
+  background-color: #007bff; /* Blue background */
+  height: 45px;
+  width: 200px; /* Fixed width */
+  color: white; /* White text */
+  padding: 0; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+  margin: 0 auto;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-family: 'CustomFont'; /* Use custom font with fallbacks */
+  font-weight: bold;
+
+  &:hover, &:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+    color: white;
+    text-decoration: none;
+    }
+  }
+
   span.footer_item {
     opacity: 0.8;
     font-weight: $bold-weight;

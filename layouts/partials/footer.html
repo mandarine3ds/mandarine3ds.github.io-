@@ -5,6 +5,11 @@
     <div class="footer_social-icons">
         {{- partial "socialIcons.html" site.Params.socialIcons -}}
     </div>
+    
+    <div class="btn_download">
+      <a href="https://github.com/mandarine3ds/mandarine/releases/latest" class="btn_download">Download Latest Release</a>
+    </div>
+    
     <small class="footer_copyright">
         © {{ now.Format "2006" }} {{ .Site.Params.author.name }}-
         {{ T "footer.disclaimer" | safeHTML }}
